@@ -1,0 +1,10 @@
+<div class="bg-image" *ngIf="isDivVisible">
+  <div *ngIf="isDivVisible"
+    class="d-flex flex-column align-items-center justify-content-center vh-100 text-center animate-load text-white">
+    <p class="mb-4">Welcome to Least Count</p>
+    <button class="btn btn-warning" (click)="hideDiv()">Let's Start</button>
+  </div>
+</div>
+<div *ngIf="!isDivVisible">
+  <app-game></app-game>
+</div>

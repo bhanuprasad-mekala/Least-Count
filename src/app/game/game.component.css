@@ -1,0 +1,85 @@
+.full-height {
+    height: 100vh;
+}
+
+.wide {
+    width: 30%;
+}
+
+.wide-2 {
+    width: 70%
+}
+
+.bg-image {
+    background-image: url('/assets/details.png');
+    background-size: cover;
+    background-position: calc(50% - 17px) center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    /* opacity: 0.5; */
+}
+
+.bg-image-2 {
+    background-image: url('/assets/game.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    /* opacity: 0.5; */
+}
+
+h3,
+label {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    /* font-size: 3.5em; */
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.tab {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    padding: 1%;
+    max-height: 90%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.tab::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.table-responsive {
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.table-responsive::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.scrollable-tbody {
+    display: block;
+    max-height: 110px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.scrollable-tbody::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.scrollable-tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}

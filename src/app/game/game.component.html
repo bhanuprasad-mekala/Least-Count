@@ -1,0 +1,80 @@
+<div class="bg-image" *ngIf="!gameStarted">
+    <div class="d-flex justify-content-center align-items-center full-height" *ngIf="!gameStarted">
+        <div class="wide">
+            <div class="row mb-3">
+                <h4 class="text-center text-white">Enter Game Details</h4>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="noOfPlayers" class="form-label text-white">Number of players</label>
+                    <input type="number" class="form-control" id="noOfPlayers" min="2" [(ngModel)]="noOfPlayers"
+                        (change)="loadUsers()">
+                </div>
+                <div class="col-md-6">
+                    <label for="targetScore" class="form-label text-white">Target Score</label>
+                    <input type="number" class="form-control" id="targetScore" min="0" [(ngModel)]="targetScore">
+                </div>
+            </div>
+            <form [formGroup]="playerForm">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Player Name</th>
+                        </tr>
+                    </thead>
+                    <tbody formArrayName="playerDetails" class="scrollable-tbody">
+                        <tr *ngFor="let player of GetPlayerDetails(); let i = index" [formGroupName]="i">
+                            <td>
+                                <input type="text" class="form-control" formControlName="playerName">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <button class="btn btn-primary w-100" (click)="startGame()">Start Game</button>
+        </div>
+    </div>
+</div>
+<div class="bg-image-2" *ngIf="gameStarted">
+    <div class="d-flex justify-content-center align-items-center full-height" *ngIf="gameStarted">
+        <div class="wide-2 tab">
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="w-100">
+                        <thead class="text-white">
+                            <tr class="text-center">
+                                <th>Player Name</th>
+                                <th>Current Score</th>
+                                <th>Total Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let player of playerList; let i = index">
+                                <td class="text-center text-white">{{player.playerName}}</td>
+                                <td>
+                                    <input type="text" class="form-control" [(ngModel)]="player.currentScore"
+                                        (change)="updateTotalScore(i)">
+                                </td>
+                                <td class="text-center text-white">{{player.totalScore}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3 text-center text-white">
+                    <table class="w-100">
+                        <thead>
+                            <tr>
+                                <th>Least Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of leaderboard">
+                                <td>{{p.playerName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

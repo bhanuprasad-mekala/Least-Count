@@ -1,0 +1,29 @@
+.bg-image {
+  background-image: url('/assets/pic1.png');
+  background-size: cover;
+  background-position: calc(50% - 10px) center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  /* opacity: 0.5; */
+}
+
+p {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 3.5em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-load {
+  animation: fadeIn 3s ease-out;
+}
