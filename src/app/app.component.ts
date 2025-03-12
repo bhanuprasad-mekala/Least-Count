@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LeastCountGame';
+  title = 'Least Count';
   
   isDivVisible = true;
 

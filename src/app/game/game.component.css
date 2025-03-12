@@ -11,7 +11,7 @@
 }
 
 .bg-image {
-    background-image: url('/assets/details.png');
+    background-image: url('../../assets/details.png');
     background-size: cover;
     background-position: calc(50% - 17px) center;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
 }
 
 .bg-image-2 {
-    background-image: url('/assets/game.png');
+    background-image: url('../../assets/game.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
